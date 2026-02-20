@@ -32,9 +32,9 @@
     "symfony/routing": "^8.0",
     "symfony/filesystem": "^8.0",
     "symfony/http-kernel": "^8.0",
-    "mitsuki/controller": "^1.0",
     "mitsuki/contracts": "^1.0",
-    "psr/container": "^2.0"
+    "psr/container": "^2.0",
+    "mitsuki/attributes": "^1.0"
   },
   "require-dev": {
     "php": ">=8.1",
