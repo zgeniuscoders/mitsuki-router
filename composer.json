@@ -32,7 +32,6 @@
     "symfony/routing": "^8.0",
     "symfony/filesystem": "^8.0",
     "symfony/http-kernel": "^8.0",
-    "php-di/php-di": "^7.1",
     "mitsuki/controller": "^1.0",
     "mitsuki/contracts": "^1.0",
     "psr/container": "^2.0"
