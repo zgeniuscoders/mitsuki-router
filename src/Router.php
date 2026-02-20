@@ -4,7 +4,7 @@ namespace Mitsuki\Hermite;
 
 use Mitsuki\Attributes\Controller;
 use Mitsuki\Attributes\Route;
-use Mitsuki\Controller\Resolvers\ControllerResolver;
+use Mitsuki\Contracts\Controllers\ControllerResolverInterface;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
@@ -42,14 +42,14 @@ class Router
      * @param RouteCollection $routeCollection Symfony collection to store generated Route objects.
      * @param RequestContext $requestContext Information about the current request (method, host, etc.).
      * @param ContainerInterface $container PSR-11 container to resolve and instantiate controllers.
-     * @param ControllerResolver $controllerResolver Service to automatically discover controllers in the project.
+     * @param ControllerResolverInterface $controllerResolver Service to automatically discover controllers in the project.
      * @param string $cacheDir Directory where the compiled route cache will be persisted.
      */
     public function __construct(
         private RouteCollection    $routeCollection,
         private RequestContext     $requestContext,
         private ContainerInterface $container,
-        private ControllerResolver $controllerResolver,
+        private ControllerResolverInterface $controllerResolver,
         string                     $cacheDir
     )
     {
