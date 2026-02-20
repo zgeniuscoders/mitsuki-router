@@ -1,0 +1,46 @@
+{
+  "name": "mitsuki/router",
+  "type": "library",
+  "description": "A lightweight and high-performance PHP router for the Mitsuki framework, powered by Symfony Routing components.",
+  "keywords": [
+    "mitsuki",
+    "router",
+    "routing",
+    "symfony-component",
+    "php8",
+    "attributes",
+    "mvc",
+    "http-kernel",
+    "fast-route",
+    "micro-framework"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Mitsuki\\Router\\": "src/",
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "zgeniusecoders",
+      "email": "zgeniusecoders@gmail.com"
+    }
+  ],
+  "require": {
+    "mitsuki/http": "^1.0",
+    "symfony/routing": "^8.0",
+    "symfony/filesystem": "^8.0",
+    "symfony/http-kernel": "^8.0",
+    "php-di/php-di": "^7.1",
+    "mitsuki/controller": "^1.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^4.4"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
