@@ -11,7 +11,6 @@
 |
 */
 
-use Mitsuki\Controller\Resolvers\ControllerResolver;
 use Mitsuki\Hermite\Router;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +26,7 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Tests\Container\MockContainer;
 use Tests\Controllers\MockPostController;
+use Tests\Resolvers\MockControllerResolver;
 
 pest()->extend(Tests\TestCase::class)->in('Feature');
 
@@ -71,7 +71,7 @@ function createMockContainer(): MockContainer
 
     $app->addDefinition(RouteCollection::class, fn() => new RouteCollection());
     $app->addDefinition(RequestContext::class, fn() => new RequestContext());
-    $app->addDefinition('ControllerResolver', fn($c) => new ControllerResolver($projectRoot));
+    $app->addDefinition('ControllerResolver', fn($c) => new MockControllerResolver());
 
     $app->addDefinition(Router::class, function ($c) {
         $router = new Router(
