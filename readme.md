@@ -33,7 +33,7 @@ use Mitsuki\Attributes\Controller;
 use Mitsuki\Attributes\Route;
 use Mitsuki\Controller\BaseController;
 use Mitsuki\Http\Responses\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
+use Mitsuki\Http\Request;
 
 #[Controller('posts')]
 class PostController extends BaseController
@@ -225,7 +225,7 @@ JsonResponse / Response
 ## Usage Example
 
 ```php
-use Symfony\Component\HttpFoundation\Request;
+use Mitsuki\Http\Request;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 $kernel = $container->get(HttpKernelInterface::class);
